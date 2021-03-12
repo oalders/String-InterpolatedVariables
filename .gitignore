@@ -1,1 +1,4 @@
+.build/
 /cover_db/
+String-InterpolatedVariables-*
+.tidyall.d

@@ -3,22 +3,9 @@ package String::InterpolatedVariables;
 use strict;
 use warnings;
 
+our $VERSION = '2.000000';
+
 use Readonly;
-
-
-=head1 NAME
-
-String::InterpolatedVariables - Extract variable names from interpolated strings.
-
-
-=head1 VERSION
-
-Version 1.1.0
-
-=cut
-
-our $VERSION = '1.1.0';
-
 
 =head1 SYNOPSIS
 
@@ -79,7 +66,6 @@ Readonly::Scalar my $VARIABLES_REGEX => qr/
 	)
 /x;
 
-
 =head1 FUNCTIONS
 
 =head2 extract()
@@ -106,20 +92,17 @@ would otherwise be interpolated during execution.
 
 =cut
 
-sub extract
-{
-	my ( $string ) = @_;
+sub extract {
+    my ($string) = @_;
 
-	my $variables = [];
-	while ( my ( $variable ) = $string =~ $VARIABLES_REGEX )
-	{
-		push( @$variables, $variable );
-		$string =~ s/\Q$variable\E//g;
-	}
+    my $variables = [];
+    while ( my ($variable) = $string =~ $VARIABLES_REGEX ) {
+        push( @$variables, $variable );
+        $string =~ s/\Q$variable\E//g;
+    }
 
-	return $variables;
+    return $variables;
 }
-
 
 =head1 BUGS
 
@@ -142,15 +125,7 @@ You can also look for information at:
 
 =item * GitHub (report bugs there)
 
-L<https://github.com/guillaumeaubert/String-InterpolatedVariables/issues>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/String-InterpolatedVariables>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/String-InterpolatedVariables>
+L<https://github.com/oalders/String-InterpolatedVariables/issues>
 
 =item * MetaCPAN
 
@@ -158,24 +133,9 @@ L<https://metacpan.org/release/String-InterpolatedVariables>
 
 =back
 
-
-=head1 AUTHOR
-
-L<Guillaume Aubert|https://metacpan.org/author/AUBERTG>,
-C<< <aubertg at cpan.org> >>.
-
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2014-2017 Guillaume Aubert.
-
-This code is free software; you can redistribute it and/or modify it under the
-same terms as Perl 5 itself.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE. See the LICENSE file for more details.
-
 =cut
 
 1;
+
+__END__
+# ABSTRACT: Extract variable names from interpolated strings.
