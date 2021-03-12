@@ -1,5 +1,7 @@
 Revision history for String-InterpolatedVariables
 
+{{$NEXT}}
+
 2.000000  2021-03-12 22:11:28Z
        - Convert to Dist::Zilla
 
