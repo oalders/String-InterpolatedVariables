@@ -43,6 +43,7 @@
             "Pod::Wordlist" : "0",
             "Test::CPAN::Changes" : "0.19",
             "Test::EOL" : "0",
+            "Test::Kwalitee::Extra" : "v0.4.0",
             "Test::Mojibake" : "0",
             "Test::More" : "0.96",
             "Test::Needs" : "0",
@@ -731,6 +732,17 @@
             },
             "name" : "@Author::OALDERS/Git::Push",
             "version" : "2.047"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Prereqs",
+            "config" : {
+               "Dist::Zilla::Plugin::Prereqs" : {
+                  "phase" : "develop",
+                  "type" : "requires"
+               }
+            },
+            "name" : "DevelopRequires",
+            "version" : "6.017"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",

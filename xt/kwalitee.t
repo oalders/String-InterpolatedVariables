@@ -13,7 +13,7 @@ Test::Kwalitee::Extra->import(
     )
 );
 
-## no critic (InputOutput::RequireCheckedSyscalls)
+## no critic (InputOutput::RequireCheckedSyscal)
 # Clean up the additional file Test::Kwalitee::Extra generates.
 END {
     unlink 'Debian_CPANTS.txt'

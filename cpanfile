@@ -36,6 +36,7 @@ on 'develop' => sub {
   requires "Pod::Wordlist" => "0";
   requires "Test::CPAN::Changes" => "0.19";
   requires "Test::EOL" => "0";
+  requires "Test::Kwalitee::Extra" => "v0.4.0";
   requires "Test::Mojibake" => "0";
   requires "Test::More" => "0.96";
   requires "Test::Needs" => "0";
